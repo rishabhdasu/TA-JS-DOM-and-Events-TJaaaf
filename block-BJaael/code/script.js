@@ -1,13 +1,15 @@
 let ul = document.querySelector(`ul`);
 
+function getRandomNum(max) {
+  return Math.floor(Math.random() * max);
+}
 for(let i = 0; i <= 500; i++){
     let li = document.createElement(`li`);
     li.classList.add(`box`);
-    let randomNum = Math.floor(Math.random() * 500);
+    let randomNum = getRandomNum(500);
     li.innerText = randomNum;
     ul.append(li);
 }
-
 let box = document.querySelectorAll(`.box`);
 
 function getRandomColor() {
@@ -23,6 +25,7 @@ function getRandomColor() {
     box.forEach(elm => {
       let random = getRandomColor();
     elm.style.backgroundColor = random;
+    elm.innerText = getRandomNum(500);
     })
 };
 
