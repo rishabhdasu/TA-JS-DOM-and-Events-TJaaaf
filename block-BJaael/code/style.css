@@ -33,3 +33,24 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* my styles */
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+.flex {
+  display: flex;
+ 
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+li {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid black;
+  color: black;
+    text-align: center;
+}
