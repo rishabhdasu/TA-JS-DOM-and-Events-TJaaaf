@@ -8,7 +8,7 @@ for(let i = 0; i <= 500; i++){
     ul.append(li);
 }
 
-let box = document.querySelector(`.box`);
+let box = document.querySelectorAll(`.box`);
 
 function getRandomColor() {
     let  letters = '0123456789ABCDEF';
