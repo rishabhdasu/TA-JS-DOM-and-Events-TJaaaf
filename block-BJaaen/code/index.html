@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper and Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Rock Paper Scissors Lizard Spock</h1>
+
+        <div class="game">
+          <div class="user">
+            <div class="score userScore"></div>
+            <div class="icons flex">
+              <button class="rock" data-text="Rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></button>
+              <button class="paper" data-text="Paper"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></button>
+              <button class="scissors" data-text="Scissors"><i class="fa fa-hand-scissors-o" aria-hidden="true"></i></button>
+              <button class="lizard" data-text="Lizard"><i class="fa fa-hand-lizard-o" aria-hidden="true"></i></button>
+              <button class="spock" data-text="Spock"><i class="fa fa-hand-spock-o" aria-hidden="true"></i></button>
+            </div>
+          </div>
+  
+          <div class="computer">
+            <div class="score computerScore"></div>
+            <div class="icons flex btn-computer">
+              <button class="rock" data-text="Rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></button>
+              <button class="paper" data-text="Paper"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></button>
+              <button class="scissors" data-text="Scissors"><i class="fa fa-hand-scissors-o" aria-hidden="true"></i></button>
+              <button class="lizard" data-text="Lizard"><i class="fa fa-hand-lizard-o" aria-hidden="true"></i></button>
+              <button class="spock" data-text="Spock"><i class="fa fa-hand-spock-o" aria-hidden="true"></i></button>
+            </div>
+          </div>
+  
+          <div class="reset">
+            <button class="reset"><i class="fa fa-refresh" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="result"></div>
+
+        </div>
+
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
