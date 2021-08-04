@@ -91,3 +91,14 @@ input[type='text'] {
 .terms {
   display: inline-block;
 }
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+.modal {
+  background-color: white;
+  font-weight: 400;
+}
+li {
+  margin-bottom: 1.5rem;
+}

@@ -29,7 +29,7 @@
         </div>
         <div class="form-control">
           <label for="movies">What do you love?</label>
-          <select id="gender" name="gender">
+          <select id="movies" name="movies">
             <option value="movies">Movies</option>
             <option value="series">Series</option>
             <option value="others">Others</option>
@@ -41,7 +41,7 @@
           <input
             id="color"
             type="color"
-            name="email"
+            name="color"
             placeholder="Enter your email"
           />
         </div>
@@ -52,7 +52,7 @@
             type="range"
             max="10"
             step="1"
-            name="email"
+            name="range"
             placeholder="Enter your email"
           />
         </div>
@@ -63,7 +63,7 @@
             <input
               type="radio"
               id="fiction"
-              name="drone"
+              name="genre"
               value="fiction"
               checked
             />
@@ -74,14 +74,14 @@
             <input
               type="radio"
               id="non-fiction"
-              name="drone"
+              name="genre"
               value="non-fiction"
             />
             <label for="non-fiction">Non Fiction</label>
           </div>
 
           <div>
-            <input type="radio" id="adventure" name="drone" value="adventure" />
+            <input type="radio" id="adventure" name="genre" value="adventure" />
             <label for="adventure">Adventure</label>
           </div>
         </div>
@@ -91,6 +91,18 @@
         </div>
         <button type="submit">Submit</button>
       </form>
+
+      <div class="modal container">
+        <ul>
+          <h2 class="hello"></h2>
+          <li class="email"></li>
+          <li class="love"></li>
+          <li class="color"></li>
+          <li class="rating"></li>
+          <li class="genre"></li>
+          <li class="modalTerms"></li>
+        </ul>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>
