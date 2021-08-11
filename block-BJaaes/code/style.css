@@ -1,0 +1,80 @@
+/* CSS Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form Validation */
+body {
+  background-color: rgb(243, 226, 225);
+}
+
+header {
+  text-align: center;
+  color: rgb(22, 20, 20);
+  font-size: 1rem;
+  margin: 3rem;
+}
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+}
+
+.form {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+.form-control {
+  margin: 1rem 2rem;
+  font-size: 1.2rem;
+}
+input {
+  display: block;
+  width: 90%;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgb(231, 231, 231);
+}
+.btn {
+ background-color: rgb(221, 104, 36);
+ border: none;
+ color: white;
+ padding: 0.5rem 1.4rem;
+ font-size: 1rem;
+}
