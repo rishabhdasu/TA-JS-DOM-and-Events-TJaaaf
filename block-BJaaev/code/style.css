@@ -1,0 +1,110 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General Styles */
+
+html, body {
+    background-color: #F5F5F5;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+}
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+}
+
+header {
+    color: #EAD7D7;
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+main {
+    background-color: white;
+    padding: 2rem;
+}
+#todo {
+   display: block;
+   margin: 0 auto;
+   padding: 1.2rem 2rem;
+   border: 2px solid #E8E6E6;
+   width: 100%;
+   margin-bottom: 2rem;
+}
+::placeholder { 
+    color: #bdb8b8;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 500;
+  }
+  li {
+      display: flex;
+      width: 100%;
+      border: 2px solid #E8E6E6;
+      padding: 1.2rem 1rem;
+   }
+  span {
+      color: rgb(173, 13, 13);
+  }
+  p {
+      margin-left: 1rem;
+      margin-right: 4rem;
+  }
