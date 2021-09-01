@@ -1,38 +1,45 @@
 let input = document.querySelector(`#todo`);
 let root = document.querySelector(`ul`);
+let all = document.querySelector(`.all`);
+let active = document.querySelector(`.active`);
+let completed = document.querySelector(`.completed`);
+let clear = document.querySelector(`.clear`);
 
-let alltodos = JSON.parse(localStorage.getItem(`todos`))|| [];
+let activeBtn = `all`;
+all.classList.add(`selected`);
+
+let alltodos =  localStorage.getItem(`alltodos`) ? JSON.parse(localStorage.getItem(`alltodos`))
+                : [];
 
 function handleEvent(event) {
     let value = event.target.value;
     if(event.keyCode === 13 && value !== "") {
-        let todo = {
+        alltodos.push({
             name: value,
             isDone: false,
-        };
-        alltodos.push(todo);
+        });
         event.target.value = ``;
-        createUI(alltodos, root);
+        createUI();
     }
-    localStorage.setItem(`todos`, JSON.stringify(alltodos)); 
+    localStorage.setItem(`alltodos`, JSON.stringify(alltodos)); 
 }
 
 function handleDelete(event) {
     let id = event.target.dataset.id;
     alltodos.splice(id, 1);
-    localStorage.setItem(`todos`, JSON.stringify(alltodos)); 
-    createUI(alltodos, root);
+    createUI();
+    localStorage.setItem(`alltodos`, JSON.stringify(alltodos));
 }
 
 function handleToggle(event) {
     let id = event.target.dataset.id;
     alltodos[id].isDone = !alltodos[id].isDone;
-    localStorage.setItem(`todos`, JSON.stringify(alltodos)); 
-    createUI(alltodos, root);
+    createUI();
+    localStorage.setItem(`alltodos`, JSON.stringify(alltodos));
 }
 
-function createUI(data, rootElm) {
-    rootElm.innerHTML = ``;
+function createUI(data = alltodos) {
+    root.innerHTML = "";
     data.forEach((todo, index) => {
         let li = document.createElement(`li`);
         let checkbox = document.createElement(`input`);
@@ -42,17 +49,54 @@ function createUI(data, rootElm) {
         checkbox.checked = todo.isDone;
         let p = document.createElement(`p`);
         p.innerText = todo.name;
-        console.log(checkbox.value);
-        if (checkbox.value === `off`) {
-            p.style.textDecoration = `line-through`;
-        }
         let span = document.createElement(`span`);
         span.innerText = `X`;
         span.addEventListener(`click`, handleDelete);
         span.setAttribute(`data-id`, index);
         li.append(checkbox, p, span);
-        rootElm.append(li);
+        root.append(li);
     })
+}
+
+all.addEventListener(`click`, () => {
+   createUI();
+   activeBtn = `all`;
+   newActive();
+});
+
+active.addEventListener(`click`, () => {
+    let notCompleted = alltodos.filter((todo) => !todo.isDone);
+    createUI(notCompleted);
+    activeBtn = `active`;
+    newActive();
+});
+
+completed.addEventListener(`click`, () => {
+    let completedTodos = alltodos.filter((todo) => todo.isDone);
+    createUI(completedTodos);
+    activeBtn = `completed`;
+    newActive();
+});
+
+clear.addEventListener(`click`, () => {
+    alltodos = alltodos.filter((todo) => !todo.isDone);
+    createUI();
+    localStorage.setItem(`alltodos`, JSON.stringify(alltodos));
+});
+
+function newActive(btn = activeBtn) {
+    all.classList.remove(`selected`);
+    active.classList.remove(`selected`);
+    completed.classList.remove(`selected`);
+    if(btn === `all`) {
+        all.classList.add(`selected`);
+    }
+    if(btn === `active`) {
+        active.classList.add(`selected`);
+    }
+    if(btn === `completed`) {
+        completed.classList.add(`selected`);
+    }
 }
 
 createUI(alltodos, root);

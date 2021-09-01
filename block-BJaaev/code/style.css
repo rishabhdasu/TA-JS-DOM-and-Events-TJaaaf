@@ -80,6 +80,7 @@ header {
 main {
     background-color: white;
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 #todo {
    display: block;
@@ -108,3 +109,17 @@ main {
       margin-left: 1rem;
       margin-right: 4rem;
   }
+
+button {
+    margin-top: 1rem;
+    border: none;
+    background-color: white;
+    padding: 0.6rem;
+    color: #777777;
+
+}
+
+.selected {
+    border: 1px solid #bdb9b9;
+    border-radius: 5px;
+}
