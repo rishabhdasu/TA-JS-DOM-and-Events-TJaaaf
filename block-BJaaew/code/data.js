@@ -326,3 +326,40 @@ let got = {
     },
   ],
 };
+
+let ul = document.querySelector(".container ,.flex")
+function createUI(){
+  got.houses.forEach( house => {
+    house.people.forEach(peoples => {
+      let li = document.createElement("li");
+      li.classList.add("box","flex-32");
+      let image = document.createElement("img")
+      image.src = peoples.image;
+      let span = document.createElement("span");
+      span.innerText = peoples.name 
+      let p = document.createElement("p");
+      p.innerText = peoples.description;
+      let button = document.createElement("button");
+      button.classList.add("btn")
+      let a = document.createElement("a");
+      a.innerText = "Learn More!"
+      button.append(a);
+  
+      li.append(image, span, p, button);
+      ul.append(li)
+    })
+  })
+}
+createUI();
+
+let input = document.querySelector("input");
+
+function handleInput(event){
+  let searchString = event.target.value;
+  let filtered = got.houses.filter(character => {
+    return (character.name.includes(searchString))
+  })
+  createUI();
+}
+
+input.addEventListener("keyup" , handleInput)
