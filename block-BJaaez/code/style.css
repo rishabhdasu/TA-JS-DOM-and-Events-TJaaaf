@@ -1,0 +1,135 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General Styles */
+
+html, body {
+    background-color: #f5c6bb;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+}
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+}
+
+h1 {
+text-align: center;
+font-size: 2rem;
+font-weight: 600;
+color: rgba(102, 46, 20, 0.788);
+margin: 2rem;
+}
+
+#text {
+   display: block;
+   margin: 0 auto;
+   padding: 1.2rem 2rem;
+   border: 2px solid #9c9b9b;
+   width: 100%;
+   margin-bottom: 2rem;
+}
+::placeholder { 
+    color: #9c9b9b;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+ 
+  li {
+      display: flex;
+      width: 100%;
+      border: 2px solid #9c9b9b;
+      padding: 1rem 1rem;
+      margin-bottom: 1rem;
+      background-color: white;
+   }
+  span {
+      color: rgb(172, 16, 16);
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  p {
+      margin-left: 1rem;
+      margin-right: 4rem;
+      display: inline-block;
+      vertical-align: middle;
+  }
+
+button {
+    margin-top: 1rem;
+    border: none;
+    background-color: white;
+    padding: 0.6rem;
+    color: #777777;
+    font-weight: bold;
+
+}
+
+.selected {
+    border: 1px solid #bbbdb9;
+    border-radius: 5px;
+    background-color: rgb(104, 231, 79);
+    color: white;
+}
